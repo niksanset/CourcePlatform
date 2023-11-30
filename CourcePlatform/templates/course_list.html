@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course list</title>
+</head>
+<body>
+    <h1>Course list page</h1>
+    <div>
+        <button><a href="course_create">Create course</a></button>
+        <button><a href="course_delete">Delete course</a></button>
+        <button><a href="course_update">Update course</a></button>
+        <button><a href="course_detail_model_list">Detail course and Module list</a></button>
+    </div>
+
+
+
+
+    <div>
+        {% for course in course_list  %}
+        <h1>{{course.title}}</h1>
+        <p>Название курса: {{ course.title }}</p>
+        <p>Описание курса: {{ course.description}}</p>
+        <p>Общее время курса: {{ course.average_time }} минут</p>
+        
+        
+        {% endfor %}
+
+
+
+    </div>
+
+    
+</body>
+</html>
