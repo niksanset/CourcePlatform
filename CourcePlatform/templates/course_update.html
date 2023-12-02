@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course update</title>
+</head>
+<body>
+    <button>
+
+        <p style="font-size: 20px;"><a style="text-decoration: none; color: coral;" href="{% url 'course_list' %}">Back to all courses</a></p>
+    </button>
+    <form method="POST" novalidate>
+        {% csrf_token %}
+        {{ form.as_p }}
+    
+        <input style="font-size: 20px;text-decoration: none; color: coral;padding: 30px;margin: 20px;" type="submit" value="Update course">
+    </form>
+    <h1>COURSE UPDATE INFO:</h1>
+    <div class="post_info">
+     <p> Название курса: {{ course.title }}</p>
+    <p>Описание курса: {{ course.description }}</p>
+    <p style="font-size: 23px;">Время курса: {{ course.average_time }} часов.</p>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson create</title>
+</head>
+<body>
+    <h1>Lesson create page</h1>
+    <button>
+
+        <p style="font-size: 20px;"><a style="text-decoration: none; color: coral;" href="{% url 'course_list' %}">Back to course detail and module list</a></p>
+    </button>
+        <h1>Create lesson</h1>
+        <br>
+    
+        <form method="POST" novalidate>
+            {% csrf_token %}
+            {{ form.as_p }}
+    
+            <input style="font-size: 20px;" type="submit" value="Create lesson">
+        </form>
+    
+</body>
+</html>

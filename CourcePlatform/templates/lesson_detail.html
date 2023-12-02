@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson detail</title>
+</head>
+<body>
+    <button>
+
+        <p style="font-size: 20px;"><a style="text-decoration: none; color: coral;" href="{% url 'course_list' %}">Back to all courses</a></p>
+      
+    </button>
+    <div style="padding: 30px;">
+        <h1>Module Detail:</h1>
+         <p style="font-size: 23px;">Название урока: {{ lesson.title }}</p>
+        <p style="font-size:23px">Контент урока: {{ lesson.content }}</p>
+        <p style="font-size: 23px;">duration_time: {{ lesson.duration_time }} мин.</p>
+        <p style="font-size: 23px;">Модуль урока: {{ lesson.module }} </p>
+        </div>
+</body>
+</html>

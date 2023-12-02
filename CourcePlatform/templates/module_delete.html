@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>
+
+        <p style="font-size: 20px;"><a style="text-decoration: none; color: coral;" href="{% url 'course_list' %}">Back to all courses</a></p>
+    </button>
+    <form method="POST" novalidate>
+        {% csrf_token %}
+    
+        <input style="font-size: 20px;text-decoration: none; color: coral;padding: 30px;margin: 20px;" type="submit" value="Delete module">
+    </form>
+   
+    <div class="post_info" style="font-size: 30px; padding: 30px;">
+    <h1>MODULE DELETE INFO:</h1>
+     <p>Название модуля: {{ module.title }}</p>
+    <p>Описание модуля: {{ module.description }}</p>
+    <p>Время модуля: {{ module.average_time }} часов</p>
+    <p>Курс модуля: {{ module.course }} часов</p>
+    
+    
+    
+    
+    
+    
+    
+    
+        
+     
+    
+    
+    
+    </div>
+</body>
+</html>
